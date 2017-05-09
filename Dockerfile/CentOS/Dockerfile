@@ -316,7 +316,9 @@ WORKDIR /home
 
 # Download the software
 RUN wget https://github.com/scienceguyrob/SKA-TestVectorGenerationPipeline/raw/master/Deploy/Software/08_12_2016/Presto_SNAPSHOT_08_12_2016.zip
-RUN wget https://github.com/scienceguyrob/SKA-TestVectorGenerationPipeline/raw/master/Deploy/Software/08_12_2016/Sigproc_MJK_SNAPSHOT_08_12_2016.zip
+# RUN wget https://github.com/scienceguyrob/SKA-TestVectorGenerationPipeline/raw/master/Deploy/Software/08_12_2016/Sigproc_MJK_SNAPSHOT_08_12_2016.zip
+# Added mikes stuff in my fork to trial for now - all other software grabbed from scienceguyrob
+RUN wget https://github.com/sallyemmacooper/SKA-TestVectorGenerationPipeline/raw/master/Deploy/Software/09_05_2017/sigproc-mk-update-20170509.zip
 RUN wget https://github.com/scienceguyrob/SKA-TestVectorGenerationPipeline/raw/master/Deploy/Software/08_12_2016/Tempo_SNAPSHOT_08_12_2016.zip
 RUN wget https://github.com/scienceguyrob/SKA-TestVectorGenerationPipeline/raw/master/Deploy/Software/08_12_2016/Tempo2_2016.11.3_SNAPSHOT_08_12_2016.zip
 
