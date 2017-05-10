@@ -3,6 +3,8 @@
 # Python    : 2.7
 # Version   : 0.1
 # Author    : Rob Lyon (robert.lyon@manchester.ac.uk)
+# Edited    : Sally Cooper (sallyemmacooper@gmail.com) 
+#           : edited on 09/05/2017
 ##############################################################################################
 #
 # This docker file will setup an environment with only a basic pulsar stack. This
@@ -324,18 +326,21 @@ RUN wget https://github.com/scienceguyrob/SKA-TestVectorGenerationPipeline/raw/m
 
 # Unzip the software
 RUN unzip Presto_SNAPSHOT_08_12_2016.zip -d /home/Presto_SNAPSHOT_08_12_2016
-RUN unzip Sigproc_MJK_SNAPSHOT_08_12_2016.zip -d /home/Sigproc_MJK_SNAPSHOT_08_12_2016
+# RUN unzip Sigproc_MJK_SNAPSHOT_08_12_2016.zip -d /home/Sigproc_MJK_SNAPSHOT_08_12_2016
+RUN unzip sigproc-mk-update-20170509.zip -d /home/sigproc-mk-update-20170509
 RUN unzip Tempo_SNAPSHOT_08_12_2016.zip -d /home/Tempo_SNAPSHOT_08_12_2016
 RUN unzip Tempo2_2016.11.3_SNAPSHOT_08_12_2016.zip -d /home/Tempo2_2016.11.3_SNAPSHOT_08_12_2016
 
 # Remove zip files
 RUN rm Presto_SNAPSHOT_08_12_2016.zip
-RUN rm Sigproc_MJK_SNAPSHOT_08_12_2016.zip
+#RUN rm Sigproc_MJK_SNAPSHOT_08_12_2016.zip
+RUN rm sigproc-mk-update-20170509.zip
 RUN rm Tempo_SNAPSHOT_08_12_2016.zip
 RUN rm Tempo2_2016.11.3_SNAPSHOT_08_12_2016.zip
 
 # Move the software to the correct folder location
-RUN mv /home/Sigproc_MJK_SNAPSHOT_08_12_2016 /home/psr/soft/sigproc
+#RUN mv /home/Sigproc_MJK_SNAPSHOT_08_12_2016 /home/psr/soft/sigproc
+RUN mv /home/sigproc-mk-update-20170509 /home/psr/soft/sigproc
 RUN mv /home/Presto_SNAPSHOT_08_12_2016 /home/psr/soft/presto
 RUN mv /home/Tempo_SNAPSHOT_08_12_2016 /home/psr/soft/tempo
 RUN mv /home/Tempo2_2016.11.3_SNAPSHOT_08_12_2016 /home/psr/soft/tempo2
