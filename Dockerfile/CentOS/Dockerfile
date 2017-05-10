@@ -345,7 +345,7 @@ RUN mv /home/Presto_SNAPSHOT_08_12_2016 /home/psr/soft/presto
 RUN mv /home/Tempo_SNAPSHOT_08_12_2016 /home/psr/soft/tempo
 RUN mv /home/Tempo2_2016.11.3_SNAPSHOT_08_12_2016 /home/psr/soft/tempo2
 
-RUN rm /home/psr/soft/sigproc/__MACOSX -R
+# RUN rm /home/psr/soft/sigproc/__MACOSX -R (cooper removed because doesn't exist in MK version 09/05/2017)
 RUN rm /home/psr/soft/presto/__MACOSX -R
 RUN rm /home/psr/soft/tempo/__MACOSX -R
 RUN rm /home/psr/soft/tempo2/__MACOSX -R
